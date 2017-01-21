@@ -1,0 +1,223 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.paymint-card {
+  width: 450px;
+  background: white;
+  border-radius: 8px;
+  position: relative;
+  height: 320px;
+  float: left;
+  z-index: 100;
+  margin-top: 1.5em;
+  box-shadow: 0 0 80px rgba(10, 199, 117, 0.3);
+  font-size: .8em; }
+  .paymint-card .tab {
+    width: 200px;
+    padding: 30px 10px 10px 10px;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    color: #9B9B9B;
+    transition: color 250ms ease-in-out; }
+    .paymint-card .tab:hover {
+      color: #4A4A4A; }
+    .paymint-card .tab.active {
+      color: #0AC775; }
+  .paymint-card > .card-form, .paymint-card > .bank-form {
+    width: 390px;
+    padding: 0 30px 30px 30px;
+    margin-top: 5px;
+    float: left;
+    text-align: left;
+    display: none; }
+    .paymint-card > .card-form label, .paymint-card > .bank-form label {
+      font-weight: 300;
+      color: #9B9B9B;
+      font-size: .9em;
+      padding-left: .5em;
+      display: inline-block;
+      margin-top: 2em; }
+    .paymint-card > .card-form input[type="text"], .paymint-card > .bank-form input[type="text"] {
+      font-size: 1.3em;
+      margin-top: .7em;
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 0;
+      border-radius: 8px;
+      border: 1px solid #dadada;
+      outline: 0; }
+      .paymint-card > .card-form input[type="text"]:focus, .paymint-card > .bank-form input[type="text"]:focus {
+        border: 1px solid #0AC775; }
+    .paymint-card > .card-form input[disabled="disabled"], .paymint-card > .bank-form input[disabled="disabled"] {
+      background: #efefef; }
+  .paymint-card .pay-btn {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: #0AC775;
+    border-radius: 0 0 8px 8px;
+    padding: 1.5em 0 1.5em 0;
+    float: left;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background 250ms ease-in-out; }
+    .paymint-card .pay-btn:hover {
+      background: #0abd6f; }
+
+.card-success {
+  width: 450px;
+  background: #0AC775;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 320px;
+  z-index: 500;
+  display: none; }
+  .card-success > .smile {
+    margin-top: 2em;
+    font-size: 3em;
+    color: white; }
+  .card-success > .message {
+    color: white;
+    font-size: 2em;
+    font-weight: 100; }
+
+@keyframes container {
+  0% {
+    opacity: 0;
+    margin-top: 200px; }
+  30% {
+    opacity: 0;
+    margin-top: 200px; }
+  70% {
+    margin-top: 90px; }
+  80% {
+    margin-top: 105px; }
+  100% {
+    opacity: 1;
+    margin-top: 100px; } }
+@keyframes cardshow {
+  0% {
+    opacity: 0;
+    margin-top: 20px; }
+  30% {
+    opacity: 0;
+    margin-top: 20px; }
+  70% {
+    margin-top: 2px; }
+  80% {
+    margin-top: 7; }
+  100% {
+    opacity: 1;
+    margin-top: 5px; } }
+@keyframes success {
+  0% {
+    opacity: 0;
+    margin-top: 20px; }
+  100% {
+    opacity: 1; } }
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 80px rgba(10, 199, 117, 0.3); }
+  50% {
+    box-shadow: 0 0 80px rgba(10, 199, 117, 0.9); }
+  100% {
+    box-shadow: 0 0 80px rgba(10, 199, 117, 0.3); } }
+.visible {
+  animation: cardshow 1s;
+  display: block !important; }
+
+.success {
+  animation: success 300ms; }
+
+.glow {
+  animation: glow 1s ease-in-out 0s infinite; }
+
+body {
+  background: #F2F2F2;
+  color: #4A4A4A;
+  font-family: 'Lato', sans-serif; }
+
+.container {
+  width: 450px;
+  margin: 100px auto;
+  text-align: center;
+  animation: container 1s; }
+  .container > .logo {
+    height: 4em; }
+  .container > .wordmark {
+    font-size: 1.5em;
+    color: #0AC775;
+    margin-bottom: .3em; }
+  .container > .slogan {
+    font-size: .7em;
+    color: #9B9B9B;
+    padding-top: .8em;
+    letter-spacing: .2em;
+    font-weight: 100; }
+
+.row {
+  width: 100%; }
+
+.column-30 {
+  width: 30% !important;
+  margin-left: 5%;
+  float: left; }
+  .column-30:first-child {
+    margin-left: 0; }
+
+.column-50 {
+  width: 45% !important;
+  margin-left: 10%;
+  float: left; }
+  .column-50:first-child {
+    margin-left: 0; }
+
+/*# sourceMappingURL=master.css.map */

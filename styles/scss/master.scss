@@ -1,0 +1,53 @@
+@import "reset";
+@import "variables";
+@import "cards";
+@import "animations";
+
+body{
+  background: #F2F2F2;
+  color: $text;
+  font-family: 'Lato', sans-serif;
+}
+.container{
+  width: 450px;
+  margin: 100px auto;
+  text-align: center;
+  animation: container 1s;
+
+  >.logo{
+    height: 4em;
+  }
+  >.wordmark{
+    font-size: 1.5em;
+    color: $green;
+    margin-bottom: .3em;
+  }
+  >.slogan{
+    font-size: .7em;
+    color: $text-light;
+    padding-top: .8em;
+    letter-spacing: .2em;
+    font-weight: 100;
+  }
+}
+
+// utitility classes
+.row{
+  width: 100%;
+}
+.column-30{
+  width: 30% !important;
+  margin-left: 5%;
+  float: left;
+  &:first-child{
+    margin-left: 0;
+  }
+}
+.column-50{
+  width: 45% !important;
+  margin-left: 10%;
+  float: left;
+  &:first-child{
+    margin-left: 0;
+  }
+}

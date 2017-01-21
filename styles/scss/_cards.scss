@@ -1,0 +1,104 @@
+.paymint-card{
+  width: 450px;
+  background: white;
+  border-radius: 8px;
+  position: relative;
+  height: 320px;
+  float: left;
+  z-index: 100;
+  margin-top: 1.5em;
+  box-shadow: 0 0 80px rgba(10, 199, 117, 0.3);
+  font-size: .8em;
+
+  .tab{
+    width:200px;
+    padding: 30px 10px 10px 10px;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    color: $text-light;
+    transition: color 250ms ease-in-out;
+    &:hover{
+      color: $text;
+    }
+    &.active{
+      color: $green;
+    }
+  }
+
+  >.card-form{
+    width: 390px;
+    padding: 0 30px 30px 30px;
+    margin-top: 5px;
+    float: left;
+    text-align: left;
+    display: none;
+
+    label{
+      font-weight: 300;
+      color: $text-light;
+      font-size: .9em;
+      padding-left: .5em;
+      display: inline-block;
+      margin-top: 2em;
+    }
+    input[type="text"]{
+      font-size: 1.3em;
+      margin-top: .7em;
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 0;
+      border-radius: 8px;
+      border: 1px solid #dadada;
+      outline: 0;
+      &:focus{
+        border: 1px solid $green;
+      }
+    }
+    input[disabled="disabled"]{
+      background: #efefef;
+    }
+  }
+  >.bank-form{
+    @extend .card-form;
+  }
+  .pay-btn{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: $green;
+    border-radius: 0 0 8px 8px;
+    padding: 1.5em 0 1.5em 0;
+    float: left;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2em;
+
+    transition: background 250ms ease-in-out;
+
+    &:hover{
+      background: darken($green, 2%);
+    }
+  }
+}
+.card-success{
+  width: 450px;
+  background: $green;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 320px;
+  z-index: 500;
+  display: none;
+  >.smile{
+    margin-top: 2em;
+    font-size: 3em;
+    color: white;
+  }
+  >.message{
+    color: white;
+    font-size: 2em;
+    font-weight: 100;
+  }
+}
